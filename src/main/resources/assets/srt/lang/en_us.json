@@ -1,0 +1,13 @@
+{
+  "item.srt.sapphire": "Sapphire",
+  "item.srt.raw_sapphire": "Raw Sapphire",
+
+  "block.srt.sapphire_block": "Block of Sapphire",
+  "block.srt.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.srt.sapphire_ore": "Sapphire Ore",
+  "block.srt.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.srt.end_stone_sapphire_ore": "End Stone Sapphire Ore",
+  "block.srt.nether_sapphire_ore": "Nether Sapphire Ore",
+
+  "creativetab.somerandomsthings_tab": "Some Random Things"
+}
