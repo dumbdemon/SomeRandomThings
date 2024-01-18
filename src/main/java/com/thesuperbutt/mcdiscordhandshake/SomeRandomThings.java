@@ -1,6 +1,9 @@
 package com.thesuperbutt.mcdiscordhandshake;
 
 import com.mojang.logging.LogUtils;
+import com.thesuperbutt.mcdiscordhandshake.block.ModBlocks;
+import com.thesuperbutt.mcdiscordhandshake.item.ModCreativeModTabs;
+import com.thesuperbutt.mcdiscordhandshake.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +16,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -31,8 +35,12 @@ public class SomeRandomThings
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModTabs.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -46,8 +54,7 @@ public class SomeRandomThings
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event){
-
+    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event){
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
