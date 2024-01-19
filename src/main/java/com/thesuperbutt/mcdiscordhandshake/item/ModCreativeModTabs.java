@@ -14,6 +14,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SomeRandomThings.MOD_ID);
 
+    @SuppressWarnings("unused")
     public static final RegistryObject<CreativeModeTab> SMR_TAB = CREATIVE_MODE_TABS.register("somerandomsthings_tab",
         () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
