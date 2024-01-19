@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "srt:block/sound_block"
+    }
+  }
+}
