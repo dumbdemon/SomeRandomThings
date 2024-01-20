@@ -16,5 +16,8 @@
 
   "block.srt.sound_block": "Sound Block",
 
-  "creativetab.somerandomsthings_tab": "Some Random Things"
+  "creativetab.srt_tab": "Some Random Things",
+
+  "tooltip.srt.metal_detector.tooltip": "Finds valuables underground!",
+  "tooltip.srt.sound_block.tooltip": "Makes sounds when right-clicked!"
 }

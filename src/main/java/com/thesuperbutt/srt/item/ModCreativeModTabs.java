@@ -15,10 +15,10 @@ public class ModCreativeModTabs {
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SomeRandomThings.MOD_ID);
 
     @SuppressWarnings("unused")
-    public static final RegistryObject<CreativeModeTab> SMR_TAB = CREATIVE_MODE_TABS.register("somerandomsthings_tab",
+    public static final RegistryObject<CreativeModeTab> SRT_TAB = CREATIVE_MODE_TABS.register("somerandomsthings_tab",
         () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
-            .title(Component.translatable("creativetab.somerandomsthings_tab"))
+            .title(Component.translatable("creativetab.srt_tab"))
             .displayItems(((itemDisplayParameters, output) -> {
                 ModItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
                 ModBlocks.BLOCKS.getEntries().forEach(block -> output.accept(block.get()));
