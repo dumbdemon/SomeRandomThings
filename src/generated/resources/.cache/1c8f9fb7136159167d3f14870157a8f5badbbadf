@@ -1,0 +1,9 @@
+// 1.20.2	2024-01-20T17:19:40.0332935	Tags for minecraft:block mod id srt
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/axe.json
+59117f987569fd8f63ad4d04fbc25994f4674e64 data/minecraft/tags/blocks/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/shovel.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
+597c6ef397ca1d165e36bdf1eed5180f80932454 data/minecraft/tags/blocks/needs_iron_tool.json
+677a9497c407700756a21b1122aecb773dd251e8 data/minecraft/tags/blocks/needs_stone_tool.json
+79e0e6222872ea9a65e99d81d25e7d870a748050 data/srt/tags/blocks/metal_detector_valuables.json
