@@ -1,8 +1,8 @@
-package com.thesuperbutt.mcdiscordhandshake.block;
+package com.thesuperbutt.srt.block;
 
-import com.thesuperbutt.mcdiscordhandshake.SomeRandomThings;
-import com.thesuperbutt.mcdiscordhandshake.block.custom.SoundBlock;
-import com.thesuperbutt.mcdiscordhandshake.item.ModItems;
+import com.thesuperbutt.srt.SomeRandomThings;
+import com.thesuperbutt.srt.block.custom.SoundBlock;
+import com.thesuperbutt.srt.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

@@ -1,4 +1,4 @@
-package com.thesuperbutt.mcdiscordhandshake.item.custom;
+package com.thesuperbutt.srt.item.custom;
 
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;

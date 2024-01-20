@@ -1,7 +1,7 @@
-package com.thesuperbutt.mcdiscordhandshake.item;
+package com.thesuperbutt.srt.item;
 
-import com.thesuperbutt.mcdiscordhandshake.SomeRandomThings;
-import com.thesuperbutt.mcdiscordhandshake.block.ModBlocks;
+import com.thesuperbutt.srt.SomeRandomThings;
+import com.thesuperbutt.srt.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

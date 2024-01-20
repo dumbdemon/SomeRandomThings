@@ -1,4 +1,4 @@
-package com.thesuperbutt.mcdiscordhandshake.item;
+package com.thesuperbutt.srt.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

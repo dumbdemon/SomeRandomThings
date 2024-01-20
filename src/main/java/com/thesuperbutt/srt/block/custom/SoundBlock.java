@@ -1,7 +1,6 @@
-package com.thesuperbutt.mcdiscordhandshake.block.custom;
+package com.thesuperbutt.srt.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;

@@ -1,4 +1,4 @@
-package com.thesuperbutt.mcdiscordhandshake;
+package com.thesuperbutt.srt;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

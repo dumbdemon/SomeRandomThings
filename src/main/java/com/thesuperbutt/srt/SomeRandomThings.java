@@ -1,9 +1,9 @@
-package com.thesuperbutt.mcdiscordhandshake;
+package com.thesuperbutt.srt;
 
 import com.mojang.logging.LogUtils;
-import com.thesuperbutt.mcdiscordhandshake.block.ModBlocks;
-import com.thesuperbutt.mcdiscordhandshake.item.ModCreativeModTabs;
-import com.thesuperbutt.mcdiscordhandshake.item.ModItems;
+import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.item.ModCreativeModTabs;
+import com.thesuperbutt.srt.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
