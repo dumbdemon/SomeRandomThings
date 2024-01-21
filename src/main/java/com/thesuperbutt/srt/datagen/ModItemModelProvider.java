@@ -50,6 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.STRAWBERRY);
+        simpleItem(ModItems.STRAWBERRY_SEEDS);
 
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
@@ -137,7 +138,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             modLoc("block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath()));
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+    private ItemModelBuilder handheldItem(@NotNull RegistryObject<Item> item) {
         return  withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/handheld")).texture("layer0",
             new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));

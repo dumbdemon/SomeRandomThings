@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-21T02:22:15.3733864	Block States: srt
+// 1.20.1	2024-01-21T13:01:28.9881652	Block States: srt
 8b4d23c0f5e52bf4cd9abbf556ff465850008e87 assets/srt/blockstates/deepslate_sapphire_ore.json
 eff1fa72ebd6099ad707aa0a19334f0954edaa95 assets/srt/blockstates/end_stone_sapphire_ore.json
 9d3c1ce8352604516855c5549e3eba9872208e8f assets/srt/blockstates/nether_sapphire_ore.json
@@ -15,6 +15,7 @@ ffc15fe0ecccf53a2069b330480bc94a0494cb7e assets/srt/blockstates/sapphire_stairs.
 e9e965ef9738cfac20ad291cfac206c604328874 assets/srt/blockstates/sapphire_trapdoor.json
 29cc30eab3cea1c7530bbdbac3d243fa2c7761fd assets/srt/blockstates/sapphire_wall.json
 9aa6d0835de11e1c751518e67537583a7efe6de1 assets/srt/blockstates/sound_block.json
+89a820a8af44b94a82a31f13018aff5de20aa138 assets/srt/blockstates/strawberry_crop.json
 ad6fb7b3dcf0f4779211f95f2e7619fd728f919e assets/srt/models/block/deepslate_sapphire_ore.json
 1a8997238d5d83f7ff7175b02c46e6a3ef078970 assets/srt/models/block/end_stone_sapphire_ore.json
 edc28bdcd3c3e384a88b09abd4750b0aebb96772 assets/srt/models/block/nether_sapphire_ore.json
@@ -51,6 +52,12 @@ ae61cc37439c811bbe3400dc16003e72d11a1358 assets/srt/models/block/sapphire_trapdo
 a016a93e0cbd0f7087533da0541a6baecebb3f43 assets/srt/models/block/sapphire_wall_side.json
 75a3c62d44c92875b50d1a5121cc05f38e88ddde assets/srt/models/block/sapphire_wall_side_tall.json
 9f3a504b2b935f8b120aa6d6044105791e2f97d2 assets/srt/models/block/sound_block.json
+c416dcab61dcc5f6120d4a5b1a07a5b7949d1953 assets/srt/models/block/strawberry_stage0.json
+adf40ba2bc911811a1aa9cca817df82ad237f1e7 assets/srt/models/block/strawberry_stage1.json
+039384ddf58fec7883620b939603ed817c5f2092 assets/srt/models/block/strawberry_stage2.json
+4172d1871db217e893838aaa8aeaaf18d21921e6 assets/srt/models/block/strawberry_stage3.json
+1bc8317747f0c19176e6fc815fb06553f9b06b4c assets/srt/models/block/strawberry_stage4.json
+eb9f1d7c050f90fef58bf5fbde04eb81ece70731 assets/srt/models/block/strawberry_stage5.json
 a3a16b3a92c36d041b93e8c1b60f9a230ff75387 assets/srt/models/item/deepslate_sapphire_ore.json
 1d6a7bae1a57a9f20c1c0d8e4feadbedcfda51fb assets/srt/models/item/end_stone_sapphire_ore.json
 2cbf986caa3cc902ab326a6ed91d03621e3b001d assets/srt/models/item/nether_sapphire_ore.json

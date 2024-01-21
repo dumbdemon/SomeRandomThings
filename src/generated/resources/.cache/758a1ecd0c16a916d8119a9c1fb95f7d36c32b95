@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-21T03:11:32.275319	Item Models: srt
+// 1.20.1	2024-01-21T13:01:28.9901649	Item Models: srt
 9b4d583c4bb10845dcb4e368ee9075423527d384 assets/srt/models/item/metal_detector.json
 009b31fea57331eb167fca609fa7639d8db38316 assets/srt/models/item/pine_cone.json
 81400f59c47db61569324d41f7ddf75368fc429a assets/srt/models/item/raw_sapphire.json
@@ -62,3 +62,4 @@ bdec108ad25b74482ae3f2f97db88eec3e041544 assets/srt/models/item/sapphire_sword.j
 31761c46df60b19b69852582178ff23afe3656a5 assets/srt/models/item/sapphire_trapdoor.json
 48fd48f7e142fa4bb4bb80108dc92c043361dbce assets/srt/models/item/sapphire_wall.json
 b3d1b12402618a3fc14ab6665e57b6e7ee189041 assets/srt/models/item/strawberry.json
+ed9ef355d070d6a94825997cb20344b63541c937 assets/srt/models/item/strawberry_seeds.json

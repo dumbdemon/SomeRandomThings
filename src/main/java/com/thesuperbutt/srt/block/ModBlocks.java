@@ -2,6 +2,7 @@ package com.thesuperbutt.srt.block;
 
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.block.custom.SoundBlock;
+import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
 import com.thesuperbutt.srt.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -14,10 +15,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.Iterator;
-import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -44,7 +42,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
         () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
 
     public static final RegistryObject<Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
         () -> new StairBlock(() -> ModBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(),
@@ -74,6 +71,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
         () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(),
             BlockSetType.IRON));
+
+    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+        () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

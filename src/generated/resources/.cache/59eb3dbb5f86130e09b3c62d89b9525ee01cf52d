@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-21T02:22:15.3743866	Loot Tables
+// 1.20.1	2024-01-21T13:01:28.9891652	Loot Tables
 7f68fd687e2b03f9728e5c3d265ed01af8dba70f data/srt/loot_tables/blocks/deepslate_sapphire_ore.json
 08a7745e92ad46d28f7a19bf5bec74ab16b9e06d data/srt/loot_tables/blocks/end_stone_sapphire_ore.json
 2fc266e48fd188b4aae4af14265fd85cf1497256 data/srt/loot_tables/blocks/nether_sapphire_ore.json
@@ -15,3 +15,4 @@ bc6e44459b18ee8aefdcbf612005c047d52f723a data/srt/loot_tables/blocks/sapphire_st
 1d4f3e6823dd49f992f348f3699427cad56c4a41 data/srt/loot_tables/blocks/sapphire_trapdoor.json
 a6770f041753ac173c36ee861e4a4773b1161be9 data/srt/loot_tables/blocks/sapphire_wall.json
 d7385ef89504d6cd5594a56b0a15f95f34928eec data/srt/loot_tables/blocks/sound_block.json
+b50dfa0656c82e865b81d27fb786afd77e5e7512 data/srt/loot_tables/blocks/strawberry_crop.json
