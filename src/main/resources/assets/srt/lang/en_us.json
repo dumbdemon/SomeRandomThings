@@ -15,6 +15,11 @@
   "item.srt.sapphire_axe" : "Sapphire Axe",
   "item.srt.sapphire_hoe" : "Sapphire Hoe",
 
+  "item.srt.sapphire_helmet" : "Sapphire Helmet",
+  "item.srt.sapphire_chestplate" : "Sapphire Chestplate",
+  "item.srt.sapphire_leggings" : "Sapphire Leggings",
+  "item.srt.sapphire_boots" : "Sapphire Boots",
+
   "block.srt.sapphire_block": "Block of Sapphire",
   "block.srt.raw_sapphire_block": "Block of Raw Sapphire",
   "block.srt.sapphire_ore": "Sapphire Ore",
