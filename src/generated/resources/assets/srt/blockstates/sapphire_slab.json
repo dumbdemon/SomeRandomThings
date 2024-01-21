@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "srt:block/sapphire_slab"
+    },
+    "type=double": {
+      "model": "srt:block/sapphire_block"
+    },
+    "type=top": {
+      "model": "srt:block/sapphire_slab_top"
+    }
+  }
+}

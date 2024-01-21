@@ -16,6 +16,16 @@
 
   "block.srt.sound_block": "Sound Block",
 
+  "block.srt.sapphire_stairs": "Sapphire Stairs",
+  "block.srt.sapphire_slab": "Sapphire Slab",
+  "block.srt.sapphire_button": "Sapphire Button",
+  "block.srt.sapphire_pressure_plate": "Sapphire Pressure Plate",
+  "block.srt.sapphire_fence": "Sapphire Fence",
+  "block.srt.sapphire_fence_gate": "Sapphire Fence Gate",
+  "block.srt.sapphire_wall": "Sapphire Wall",
+  "block.srt.sapphire_door": "Sapphire Door",
+  "block.srt.sapphire_trapdoor": "Sapphire Trapdoor",
+
   "creativetab.srt_tab": "Some Random Things",
 
   "tooltip.srt.metal_detector.tooltip": "Finds valuables underground!",

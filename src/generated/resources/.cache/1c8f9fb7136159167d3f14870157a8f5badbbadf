@@ -1,9 +1,17 @@
-// 1.20.2	2024-01-20T17:19:40.0332935	Tags for minecraft:block mod id srt
+// 1.20.2	2024-01-20T18:33:29.1663744	Tags for minecraft:block mod id srt
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+01ca73d5c5019b9165e138aa26ef2f0610764de8 data/minecraft/tags/blocks/buttons.json
+b6a0cac18cb3a4952686fddc7c724960b32ea509 data/minecraft/tags/blocks/doors.json
+8e592c4b8ee0f80d2765fd6364e9f607a82c2fd1 data/minecraft/tags/blocks/fences.json
+edd1c4ab14cfbd890d17c94a60de27b39641c8b7 data/minecraft/tags/blocks/fence_gates.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/axe.json
-59117f987569fd8f63ad4d04fbc25994f4674e64 data/minecraft/tags/blocks/mineable/pickaxe.json
+11d98af45229e838c2043207eeecbd7bfa88e172 data/minecraft/tags/blocks/mineable/pickaxe.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/shovel.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
 597c6ef397ca1d165e36bdf1eed5180f80932454 data/minecraft/tags/blocks/needs_iron_tool.json
 677a9497c407700756a21b1122aecb773dd251e8 data/minecraft/tags/blocks/needs_stone_tool.json
+8b46579af13ffb9d2f87af46e55eb2cfb213a344 data/minecraft/tags/blocks/slabs.json
+daa5135c8e69172c20230100e6710dbae6b1a9d6 data/minecraft/tags/blocks/stairs.json
+8b0f5c8cb3bcef6212d38e2bb5149735708e321d data/minecraft/tags/blocks/trapdoors.json
+c6e87642bdcfd3c1bba28761c3a760929db72cf1 data/minecraft/tags/blocks/walls.json
 79e0e6222872ea9a65e99d81d25e7d870a748050 data/srt/tags/blocks/metal_detector_valuables.json

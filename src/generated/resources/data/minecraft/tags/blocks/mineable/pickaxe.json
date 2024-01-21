@@ -5,6 +5,15 @@
     "srt:sapphire_ore",
     "srt:deepslate_sapphire_ore",
     "srt:nether_sapphire_ore",
-    "srt:end_stone_sapphire_ore"
+    "srt:end_stone_sapphire_ore",
+    "srt:sapphire_stairs",
+    "srt:sapphire_door",
+    "srt:sapphire_slab",
+    "srt:sapphire_button",
+    "srt:sapphire_fence_gate",
+    "srt:sapphire_fence",
+    "srt:sapphire_trapdoor",
+    "srt:sapphire_pressure_plate",
+    "srt:sapphire_wall"
   ]
 }

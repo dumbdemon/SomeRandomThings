@@ -36,7 +36,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.SAPPHIRE_ORE.get(),
                 ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                 ModBlocks.NETHER_SAPPHIRE_ORE.get(),
-                ModBlocks.END_STONE_SAPPHIRE_ORE.get()
+                ModBlocks.END_STONE_SAPPHIRE_ORE.get(),
+                ModBlocks.SAPPHIRE_STAIRS.get(),
+                ModBlocks.SAPPHIRE_DOOR.get(),
+                ModBlocks.SAPPHIRE_SLAB.get(),
+                ModBlocks.SAPPHIRE_BUTTON.get(),
+                ModBlocks.SAPPHIRE_FENCE_GATE.get(),
+                ModBlocks.SAPPHIRE_FENCE.get(),
+                ModBlocks.SAPPHIRE_TRAPDOOR.get(),
+                ModBlocks.SAPPHIRE_PRESSURE_PLATE.get(),
+                ModBlocks.SAPPHIRE_WALL.get()
             );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -56,5 +65,29 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
             );
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        this.tag(BlockTags.FENCES)
+            .add(ModBlocks.SAPPHIRE_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+            .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+
+        this.tag(BlockTags.DOORS)
+            .add(ModBlocks.SAPPHIRE_DOOR.get());
+
+        this.tag(BlockTags.WALLS)
+            .add(ModBlocks.SAPPHIRE_WALL.get());
+
+        this.tag(BlockTags.SLABS)
+            .add(ModBlocks.SAPPHIRE_SLAB.get());
+
+        this.tag(BlockTags.BUTTONS)
+            .add(ModBlocks.SAPPHIRE_BUTTON.get());
+
+        this.tag(BlockTags.TRAPDOORS)
+            .add(ModBlocks.SAPPHIRE_TRAPDOOR.get());
+
+        this.tag(BlockTags.STAIRS)
+            .add(ModBlocks.SAPPHIRE_STAIRS.get());
     }
 }

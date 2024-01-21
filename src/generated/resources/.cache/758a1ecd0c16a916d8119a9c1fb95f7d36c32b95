@@ -1,6 +1,15 @@
-// 1.20.2	2024-01-20T17:19:40.0382942	Item Models: srt
+// 1.20.2	2024-01-20T18:33:29.1723751	Item Models: srt
 9b4d583c4bb10845dcb4e368ee9075423527d384 assets/srt/models/item/metal_detector.json
 009b31fea57331eb167fca609fa7639d8db38316 assets/srt/models/item/pine_cone.json
 81400f59c47db61569324d41f7ddf75368fc429a assets/srt/models/item/raw_sapphire.json
 02d3c63291d1196b25a9346bd6066b1158db7b93 assets/srt/models/item/sapphire.json
+c283c3231bdab30866cc2f66139c4dbf4ae9bbe9 assets/srt/models/item/sapphire_button.json
+b631f9474039caedb8ab31791971d77aee3c002d assets/srt/models/item/sapphire_door.json
+792636b46baf49d402bcf6804751001ddf0e0a83 assets/srt/models/item/sapphire_fence.json
+58f88fc1e3a1b5b193ea12f4063bfbb3ccf3a1e6 assets/srt/models/item/sapphire_fence_gate.json
+b7c155f447bbcd58b828b8770b5d195b29f20118 assets/srt/models/item/sapphire_pressure_plate.json
+795e6c7a7fcd39e1b57e5e422e3de13bc61b32c7 assets/srt/models/item/sapphire_slab.json
+afef686395d41cfd05b6396af5639cd79caa2a1b assets/srt/models/item/sapphire_stairs.json
+31761c46df60b19b69852582178ff23afe3656a5 assets/srt/models/item/sapphire_trapdoor.json
+48fd48f7e142fa4bb4bb80108dc92c043361dbce assets/srt/models/item/sapphire_wall.json
 b3d1b12402618a3fc14ab6665e57b6e7ee189041 assets/srt/models/item/strawberry.json
