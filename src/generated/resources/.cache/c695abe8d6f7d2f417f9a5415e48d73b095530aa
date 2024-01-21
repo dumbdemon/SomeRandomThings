@@ -1,0 +1,5 @@
+// 1.20.1	2024-01-21T03:47:58.2325334	Global Loot Modifiers : srt
+17ced66e0d93a54f67203a30344494e5109e310f data/forge/loot_modifiers/global_loot_modifiers.json
+60b01657101ae692f281985277df4b8c7d414ee2 data/srt/loot_modifiers/metal_detector_from_jungle_temples.json
+0e737c99756c6e3231c24d56f1f841c4ee804e8b data/srt/loot_modifiers/pine_cone_from_creeper.json
+ccfa09961937fff7ca9c13472f1aa5331473df6f data/srt/loot_modifiers/pine_cone_from_grass.json

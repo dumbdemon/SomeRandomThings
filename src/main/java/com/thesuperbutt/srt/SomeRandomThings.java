@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.thesuperbutt.srt.block.ModBlocks;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
 import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.loot.ModLootModifier;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,12 +34,12 @@ public class SomeRandomThings {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ModCreativeModTabs.register(modEventBus);
-
         // Register ourselves for server and other game events we are interested in
+        ModCreativeModTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifier.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
