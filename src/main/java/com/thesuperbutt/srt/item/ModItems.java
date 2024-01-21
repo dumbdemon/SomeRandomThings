@@ -3,6 +3,7 @@ package com.thesuperbutt.srt.item;
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.item.custom.FuelItem;
 import com.thesuperbutt.srt.item.custom.MetalDetectorItem;
+import com.thesuperbutt.srt.item.custom.ModArmorItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -43,7 +44,7 @@ public class ModItems {
         () -> new HoeItem(ModToolsTiers.SAPPHIRE, 0, 0f, new Item.Properties()));
 
     public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
-        () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Properties()));
+        () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
