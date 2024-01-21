@@ -3,6 +3,7 @@ package com.thesuperbutt.srt.datagen;
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.item.ModItems;
 import com.thesuperbutt.srt.loot.AddItemModifier;
+import com.thesuperbutt.srt.loot.AddSusSandItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +31,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
             new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build()
+        }, ModItems.METAL_DETECTOR.get()));
+
+        add("metal_detector_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[] {
+            new LootTableIdCondition.Builder(new ResourceLocation("archeology/desert_pyramid")).build()
         }, ModItems.METAL_DETECTOR.get()));
     }
 }
