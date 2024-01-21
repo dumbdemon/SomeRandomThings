@@ -21,15 +21,13 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SomeRandomThings.MOD_ID)
-public class SomeRandomThings
-{
+public class SomeRandomThings {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "srt";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public SomeRandomThings()
-    {
+    public SomeRandomThings() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
@@ -54,7 +52,7 @@ public class SomeRandomThings
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event){
+    private void addCreative(@NotNull BuildCreativeModeTabContentsEvent event) {
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

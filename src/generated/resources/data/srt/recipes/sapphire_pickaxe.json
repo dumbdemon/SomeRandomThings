@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "equipment",
   "key": {
     "S": {
       "item": "srt:sapphire"
+    },
+    "s": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
     "SSS",
-    "SSS",
-    "SSS"
+    " s ",
+    " s "
   ],
   "result": {
-    "item": "srt:sapphire_block"
+    "item": "srt:sapphire_pickaxe"
   },
   "show_notification": true
 }

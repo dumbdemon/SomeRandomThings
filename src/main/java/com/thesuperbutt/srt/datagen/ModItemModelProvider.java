@@ -14,7 +14,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 import java.util.Objects;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -43,6 +42,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_FENCE_GATE);
 
         trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
+
+        handheldItem(ModItems.SAPPHIRE_AXE);
+        handheldItem(ModItems.SAPPHIRE_SHOVEL);
+        handheldItem(ModItems.SAPPHIRE_PICKAXE);
+        handheldItem(ModItems.SAPPHIRE_HOE);
+        handheldItem(ModItems.SAPPHIRE_SWORD);
     }
 
     private ItemModelBuilder simpleItem(@NotNull RegistryObject<Item> item) {
@@ -57,15 +62,21 @@ public class ModItemModelProvider extends ItemModelProvider {
             new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));
     }
 
+    private void evenSimplerBlockItem(@NotNull RegistryObject<Block> block) {
+        this.withExistingParent(SomeRandomThings.MOD_ID + ":" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(),
+            modLoc("block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return  withExistingParent(item.getId().getPath(),
+            new ResourceLocation("item/handheld")).texture("layer0",
+            new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
     private void fenceItem(@NotNull RegistryObject<Block> block, @NotNull RegistryObject<Block> baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
             .texture("texture", new ResourceLocation(SomeRandomThings.MOD_ID, "block/" +
                 Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock.get())).getPath()));
-    }
-
-    private void evenSimplerBlockItem(@NotNull RegistryObject<Block> block) {
-        this.withExistingParent(SomeRandomThings.MOD_ID + ":" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(),
-            modLoc("block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath()));
     }
 
     private void trapdoorItem(@NotNull RegistryObject<Block> block) {

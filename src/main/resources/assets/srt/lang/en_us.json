@@ -7,6 +7,14 @@
   "item.srt.strawberry": "Strawberry",
   "item.srt.pine_cone": "Pine Cone",
 
+  "item.srt.sapphire_staff": "Sapphire Staff",
+
+  "item.srt.sapphire_sword" : "Sapphire Sword",
+  "item.srt.sapphire_pickaxe" : "Sapphire Pickaxe",
+  "item.srt.sapphire_shovel" : "Sapphire Shovel",
+  "item.srt.sapphire_axe" : "Sapphire Axe",
+  "item.srt.sapphire_hoe" : "Sapphire Hoe",
+
   "block.srt.sapphire_block": "Block of Sapphire",
   "block.srt.raw_sapphire_block": "Block of Raw Sapphire",
   "block.srt.sapphire_ore": "Sapphire Ore",
@@ -25,8 +33,6 @@
   "block.srt.sapphire_wall": "Sapphire Wall",
   "block.srt.sapphire_door": "Sapphire Door",
   "block.srt.sapphire_trapdoor": "Sapphire Trapdoor",
-
-  "item.srt.sapphire_staff": "Sapphire Staff",
 
   "creativetab.srt_tab": "Some Random Things",
 

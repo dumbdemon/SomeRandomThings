@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "srt:sapphire_block"
+        "recipe": "srt:sapphire_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_sapphire"
+      "has_sapphire",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "srt:sapphire_block"
+      "srt:sapphire_sword"
     ]
   },
   "sends_telemetry_event": false

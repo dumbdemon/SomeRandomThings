@@ -1,4 +1,4 @@
-// 1.20.2	2024-01-20T18:33:29.1663744	Tags for minecraft:block mod id srt
+// 1.20.1	2024-01-21T02:22:15.370387	Tags for minecraft:block mod id srt
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
 01ca73d5c5019b9165e138aa26ef2f0610764de8 data/minecraft/tags/blocks/buttons.json
 b6a0cac18cb3a4952686fddc7c724960b32ea509 data/minecraft/tags/blocks/doors.json
@@ -15,3 +15,4 @@ daa5135c8e69172c20230100e6710dbae6b1a9d6 data/minecraft/tags/blocks/stairs.json
 8b0f5c8cb3bcef6212d38e2bb5149735708e321d data/minecraft/tags/blocks/trapdoors.json
 c6e87642bdcfd3c1bba28761c3a760929db72cf1 data/minecraft/tags/blocks/walls.json
 79e0e6222872ea9a65e99d81d25e7d870a748050 data/srt/tags/blocks/metal_detector_valuables.json
+d7914192eb0ce32bef87359c881c4c11f63dc44c data/srt/tags/blocks/needs_sapphire_tool.json

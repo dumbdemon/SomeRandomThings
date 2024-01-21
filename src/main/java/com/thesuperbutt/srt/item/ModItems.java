@@ -3,7 +3,7 @@ package com.thesuperbutt.srt.item;
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.item.custom.FuelItem;
 import com.thesuperbutt.srt.item.custom.MetalDetectorItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +30,17 @@ public class ModItems {
 
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
         () -> new FuelItem(new Item.Properties(), 400));
+
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
+        () -> new SwordItem(ModToolsTiers.SAPPHIRE, 4, 2f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
+        () -> new ShovelItem(ModToolsTiers.SAPPHIRE, 0, 0f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
+        () -> new AxeItem(ModToolsTiers.SAPPHIRE, 7, 1f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
+        () -> new PickaxeItem(ModToolsTiers.SAPPHIRE, 1, 1f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
+        () -> new HoeItem(ModToolsTiers.SAPPHIRE, 0, 0f, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

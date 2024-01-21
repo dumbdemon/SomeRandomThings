@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sapphire_ore": {
+    "has_sapphire": {
       "conditions": {
         "items": [
           {
             "items": [
-              "srt:sapphire_ore"
+              "srt:sapphire"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "srt:sapphire_from_blasting_sapphire_ore"
+        "recipe": "srt:sapphire_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_sapphire_ore",
+      "has_sapphire",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "srt:sapphire_from_blasting_sapphire_ore"
+      "srt:sapphire_pickaxe"
     ]
   },
   "sends_telemetry_event": false
