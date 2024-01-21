@@ -1,5 +1,6 @@
 package com.thesuperbutt.srt.item;
 
+import com.thesuperbutt.srt.util.CreativeObject;
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -20,8 +21,12 @@ public class ModCreativeModTabs {
             .icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
             .title(Component.translatable("creativetab.srt_tab"))
             .displayItems(((itemDisplayParameters, output) -> {
-                ModItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
-                ModBlocks.BLOCKS.getEntries().forEach(block -> output.accept(block.get()));
+                ModItems.ITEMS.getEntries().stream().map(RegistryObject::get)
+                    .filter(item -> !(item instanceof CreativeObject) || ((CreativeObject) item).addToCreative())
+                    .forEach(output::accept);
+                ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)
+                    .filter(block -> !(block instanceof CreativeObject) || ((CreativeObject) block).addToCreative())
+                    .forEach(output::accept);
             }))
             .build());
 

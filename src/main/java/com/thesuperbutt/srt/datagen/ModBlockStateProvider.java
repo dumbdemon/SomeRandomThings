@@ -2,7 +2,7 @@ package com.thesuperbutt.srt.datagen;
 
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.block.ModBlocks;
-import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
+import com.thesuperbutt.srt.block.custom.TwoBlockCrop;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -44,16 +44,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType((DoorBlock) ModBlocks.SAPPHIRE_DOOR.get(), modLoc("block/sapphire_door_bottom"), modLoc("block/sapphire_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.SAPPHIRE_TRAPDOOR.get(), modLoc("block/sapphire_trapdoor"), true, "cutout");
 
-        makeStrawberryCrop((StrawberryCropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        make2BlockCrop((TwoBlockCrop) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        make2BlockCrop((TwoBlockCrop) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
     }
 
-    public void makeStrawberryCrop(StrawberryCropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
+    public void make2BlockCrop(TwoBlockCrop block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> twoBlockCropStates(state, block, modelName, textureName);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel @NotNull [] strawberryStates(@NotNull BlockState state, @NotNull StrawberryCropBlock block, String modelName, String textureName) {
+    private ConfiguredModel @NotNull [] twoBlockCropStates(@NotNull BlockState state, @NotNull TwoBlockCrop block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(block.getAgeProperty()),
             new ResourceLocation(SomeRandomThings.MOD_ID, "block/" + textureName + state.getValue(block.getAgeProperty()))).renderType("cutout"));

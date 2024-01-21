@@ -1,6 +1,7 @@
 package com.thesuperbutt.srt.datagen.loot;
 
 import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.custom.CornCropBlock;
 import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
 import com.thesuperbutt.srt.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -60,6 +61,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
             ModItems.STRAWBERRY_SEEDS.get(), toDropSeedOrCropStrawberry));
+
+        LootItemCondition.Builder toDropSeedOrCropCorn = LootItemBlockStatePropertyCondition
+            .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7))
+            .or(LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
+
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+            ModItems.CORN_SEEDS.get(), toDropSeedOrCropCorn));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

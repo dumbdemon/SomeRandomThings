@@ -21,6 +21,9 @@
   "item.srt.sapphire_boots" : "Sapphire Boots",
   "item.srt.strawberry_seeds" : "Strawberry Seeds",
 
+  "item.srt.corn": "Corn",
+  "item.srt.corn_seeds": "Corn Seeds",
+
   "block.srt.sapphire_block": "Block of Sapphire",
   "block.srt.raw_sapphire_block": "Block of Raw Sapphire",
   "block.srt.sapphire_ore": "Sapphire Ore",
