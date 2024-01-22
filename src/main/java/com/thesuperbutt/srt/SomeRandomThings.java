@@ -5,6 +5,7 @@ import com.thesuperbutt.srt.block.ModBlocks;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
 import com.thesuperbutt.srt.item.ModItems;
 import com.thesuperbutt.srt.loot.ModLootModifier;
+import com.thesuperbutt.srt.villager.ModVillagers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -42,6 +43,7 @@ public class SomeRandomThings {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModLootModifier.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

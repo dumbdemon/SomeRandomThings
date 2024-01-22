@@ -48,5 +48,7 @@
   "creativetab.srt_tab": "Some Random Things",
 
   "tooltip.srt.metal_detector.tooltip": "Finds valuables underground!",
-  "tooltip.srt.sound_block.tooltip": "Makes sounds when right-clicked!"
+  "tooltip.srt.sound_block.tooltip": "Makes sounds when right-clicked!",
+
+  "entity.minecraft.villager.srt.soundengineer": "Sound Engineer"
 }

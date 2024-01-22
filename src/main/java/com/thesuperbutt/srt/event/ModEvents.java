@@ -2,6 +2,7 @@ package com.thesuperbutt.srt.event;
 
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
@@ -21,13 +22,22 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void addCustomTrades(@NotNull VillagerTradesEvent event) {
-        if (event.getType() == VillagerProfession.FARMER) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+        if (!(event.getType() instanceof VillagerProfession)) return;
+        Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
+        if (event.getType() == VillagerProfession.FARMER) {
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.EMERALD, 2),
                 new ItemStack(ModItems.STRAWBERRY.get(), 12),
                 10, 8, 0.02f
+            ));
+        }
+
+        if (event.getType() == ModVillagers.SOUND_ENGINEER.get()) {
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 16),
+                new ItemStack(Items.JUKEBOX, 1),
+                Integer.MAX_VALUE, 1, 0.001f
             ));
         }
     }
