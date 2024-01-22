@@ -5,6 +5,7 @@ import com.thesuperbutt.srt.block.custom.CornCropBlock;
 import com.thesuperbutt.srt.block.custom.SoundBlock;
 import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
 import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.sound.ModSounds;
 import com.thesuperbutt.srt.util.co.NCTOFlowerPotBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -44,7 +45,7 @@ public class ModBlocks {
             .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-        () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+        () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
         () -> new StairBlock(() -> ModBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(),

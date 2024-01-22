@@ -50,5 +50,12 @@
   "tooltip.srt.metal_detector.tooltip": "Finds valuables underground!",
   "tooltip.srt.sound_block.tooltip": "Makes sounds when right-clicked!",
 
-  "entity.minecraft.villager.srt.soundengineer": "Sound Engineer"
+  "entity.minecraft.villager.srt.soundengineer": "Sound Engineer",
+
+  "sounds.srt.metal_detector_found_ore": "Metal Detector Ding",
+  "sounds.srt.sound_block_break": "Sound Block has been fragged",
+  "sounds.srt.sound_block_hit": "Sound Block has been hit",
+  "sounds.srt.sound_block_fall": "Sound Block fell",
+  "sounds.srt.sound_block_step": "Sound Block stepped on",
+  "sounds.srt.sound_block_place": "Sound Block placed"
 }
