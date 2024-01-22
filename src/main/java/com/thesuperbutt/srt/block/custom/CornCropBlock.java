@@ -1,7 +1,6 @@
 package com.thesuperbutt.srt.block.custom;
 
 import com.thesuperbutt.srt.item.ModItems;
-import com.thesuperbutt.srt.util.CreativeObject;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -20,7 +19,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
 import org.jetbrains.annotations.NotNull;
 
-public class CornCropBlock extends TwoBlockCrop implements CreativeObject{
+public class CornCropBlock extends TwoBlockCrop {
 
     public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;

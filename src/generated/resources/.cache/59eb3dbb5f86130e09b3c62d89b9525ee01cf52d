@@ -1,8 +1,10 @@
-// 1.20.1	2024-01-21T15:47:01.5786301	Loot Tables
+// 1.20.1	2024-01-21T19:37:16.0030081	Loot Tables
+95d840604c87b326d07c1cdcc3acef2ebfacd72d data/srt/loot_tables/blocks/catmint.json
 e5d15ba491f7ad8aba9741b5eab78da41062d824 data/srt/loot_tables/blocks/corn_crop.json
 7f68fd687e2b03f9728e5c3d265ed01af8dba70f data/srt/loot_tables/blocks/deepslate_sapphire_ore.json
 08a7745e92ad46d28f7a19bf5bec74ab16b9e06d data/srt/loot_tables/blocks/end_stone_sapphire_ore.json
 2fc266e48fd188b4aae4af14265fd85cf1497256 data/srt/loot_tables/blocks/nether_sapphire_ore.json
+d63a9a5b33976d6081ae7b978c5ca801bc8d40d9 data/srt/loot_tables/blocks/potted_catmint.json
 0e6d4a1c6312316e36fc320de2584bdfa6628b8e data/srt/loot_tables/blocks/raw_sapphire_block.json
 cec751488a7ba396cb3c3e89161faf266ebe6080 data/srt/loot_tables/blocks/sapphire_block.json
 7e305f11a7d2542082bad8b1e79a139f5e3bead0 data/srt/loot_tables/blocks/sapphire_button.json

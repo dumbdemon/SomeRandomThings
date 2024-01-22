@@ -5,6 +5,8 @@ import com.thesuperbutt.srt.block.ModBlocks;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
 import com.thesuperbutt.srt.item.ModItems;
 import com.thesuperbutt.srt.loot.ModLootModifier;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -48,8 +50,8 @@ public class SomeRandomThings {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-
+    private void commonSetup(final @NotNull FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT));
     }
 
     // Add the example block item to the building blocks tab

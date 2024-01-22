@@ -5,8 +5,10 @@ import com.thesuperbutt.srt.block.custom.CornCropBlock;
 import com.thesuperbutt.srt.block.custom.SoundBlock;
 import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
 import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.util.co.NCTOFlowerPotBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -77,6 +79,12 @@ public class ModBlocks {
         () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
         () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CATMINT = registerBlock("catmint",
+        () -> new FlowerBlock(() -> MobEffects.LUCK, 5, BlockBehaviour.Properties.copy(Blocks.ALLIUM).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
+        () -> new NCTOFlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
+            ModBlocks.CATMINT, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
