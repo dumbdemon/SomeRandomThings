@@ -24,6 +24,9 @@
   "item.srt.corn": "Corn",
   "item.srt.corn_seeds": "Corn Seeds",
 
+  "item.srt.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.srt.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
   "block.srt.sapphire_block": "Block of Sapphire",
   "block.srt.raw_sapphire_block": "Block of Raw Sapphire",
   "block.srt.sapphire_ore": "Sapphire Ore",
