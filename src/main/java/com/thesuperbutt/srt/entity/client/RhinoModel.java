@@ -18,13 +18,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class RhinoModel<T extends Entity> extends HierarchicalModel<T> {
     private final ModelPart rhino;
-	private final ModelPart head;
+    private final ModelPart head;
 
     public RhinoModel(@NotNull ModelPart root) {
         this.rhino = root.getChild("rhino");
-		this.head = rhino.getChild("body")
-			.getChild("torso")
-			.getChild("head");
+        this.head = rhino.getChild("body")
+            .getChild("torso")
+            .getChild("head");
     }
 
     public static @NotNull LayerDefinition createBodyLayer() {
@@ -112,8 +112,8 @@ public class RhinoModel<T extends Entity> extends HierarchicalModel<T> {
         rhino.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
-	@Override
-	public @NotNull ModelPart root() {
-		return rhino;
-	}
+    @Override
+    public @NotNull ModelPart root() {
+        return rhino;
+    }
 }

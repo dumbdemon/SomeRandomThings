@@ -29,6 +29,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(pOutput);
     }
 
+    protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients,
+                                      @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
+                                      int pCookingTime, @NotNull String pGroup) {
+        oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
+    }
+
+    protected static void oreBlasting(@NotNull Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients,
+                                      @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
+                                      int pCookingTime, @NotNull String pGroup) {
+        oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected static void oreCooking(@NotNull Consumer<FinishedRecipe> pRecipeOutput, @NotNull RecipeSerializer<? extends AbstractCookingRecipe> pSerializer,
+                                     @NotNull List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
+                                     int pCookingTime, @NotNull String pGroup, String pSuffix) {
+        for (ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pSerializer)
+                .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                .save(pRecipeOutput, SomeRandomThings.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike));
+        }
+
+    }
+
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeOutput) {
         oreSmelting(recipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
@@ -99,28 +122,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .requires(ModBlocks.SAPPHIRE_BLOCK.get())
             .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
             .save(recipeOutput);
-    }
-
-    protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients,
-                                      @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
-                                      int pCookingTime, @NotNull String pGroup) {
-        oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
-    }
-
-    protected static void oreBlasting(@NotNull Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients,
-                                      @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
-                                      int pCookingTime, @NotNull String pGroup) {
-        oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
-    }
-
-    protected static void oreCooking(@NotNull Consumer<FinishedRecipe> pRecipeOutput, @NotNull RecipeSerializer<? extends AbstractCookingRecipe> pSerializer,
-                                     @NotNull List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience,
-                                     int pCookingTime, @NotNull String pGroup, String pSuffix) {
-        for (ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pSerializer)
-                .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                .save(pRecipeOutput, SomeRandomThings.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike));
-        }
-
     }
 }

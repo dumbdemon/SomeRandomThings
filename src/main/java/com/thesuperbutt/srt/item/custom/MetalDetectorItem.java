@@ -28,7 +28,7 @@ public class MetalDetectorItem extends Item {
 
     @Override
     public @NotNull InteractionResult useOn(@NotNull UseOnContext pContext) {
-        if(!pContext.getLevel().isClientSide()) {
+        if (!pContext.getLevel().isClientSide()) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             assert player != null;

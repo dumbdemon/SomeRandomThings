@@ -29,15 +29,24 @@ import org.jetbrains.annotations.Nullable;
 public class RhinoEntity extends Animal {
     private static final EntityDataAccessor<Boolean> ATTACKING =
         SynchedEntityData.defineId(RhinoEntity.class, EntityDataSerializers.BOOLEAN);
-
+    public final AnimationState idleAnimationState = new AnimationState();
+    public final AnimationState attackAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
+    private int attackAnimationTimeout = 0;
     public RhinoEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    public final AnimationState idleAnimationState = new AnimationState();
-    private int idleAnimationTimeout = 0;
-    public final AnimationState attackAnimationState = new AnimationState();
-    private int attackAnimationTimeout = 0;
+    public static AttributeSupplier.@NotNull Builder createAttributes() {
+        return Animal.createLivingAttributes()
+            .add(Attributes.MAX_HEALTH, 200)
+            .add(Attributes.MOVEMENT_SPEED, 0.25D)
+            .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
+            .add(Attributes.ATTACK_KNOCKBACK, 0.7f)
+            .add(Attributes.ATTACK_DAMAGE, 3f)
+            .add(Attributes.KNOCKBACK_RESISTANCE, 0.9f)
+            .add(Attributes.FOLLOW_RANGE, 24D);
+    }
 
     @Override
     public void tick() {
@@ -68,12 +77,12 @@ public class RhinoEntity extends Animal {
         }
     }
 
-    public void setAttacking(boolean attacking) {
-        this.entityData.set(ATTACKING, attacking);
-    }
-
     public boolean isAttacking() {
         return this.entityData.get(ATTACKING);
+    }
+
+    public void setAttacking(boolean attacking) {
+        this.entityData.set(ATTACKING, attacking);
     }
 
     public void resetAttackAnimationTimeout() {
@@ -113,17 +122,6 @@ public class RhinoEntity extends Animal {
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-    }
-
-    public static AttributeSupplier.@NotNull Builder createAttributes() {
-        return Animal.createLivingAttributes()
-            .add(Attributes.MAX_HEALTH, 200)
-            .add(Attributes.MOVEMENT_SPEED, 0.25D)
-            .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
-            .add(Attributes.ATTACK_KNOCKBACK, 0.7f)
-            .add(Attributes.ATTACK_DAMAGE, 3f)
-            .add(Attributes.KNOCKBACK_RESISTANCE, 0.9f)
-            .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
     @Nullable

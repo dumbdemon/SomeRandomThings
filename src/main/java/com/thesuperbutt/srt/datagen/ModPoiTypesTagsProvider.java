@@ -19,7 +19,7 @@ public class ModPoiTypesTagsProvider extends PoiTypeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
-       tag(PoiTypeTags.ACQUIRABLE_JOB_SITE)
-           .addOptional(new ResourceLocation(SomeRandomThings.MOD_ID, "sound_poi"));
+        tag(PoiTypeTags.ACQUIRABLE_JOB_SITE)
+            .addOptional(new ResourceLocation(SomeRandomThings.MOD_ID, "sound_poi"));
     }
 }

@@ -1,8 +1,8 @@
 package com.thesuperbutt.srt.item;
 
-import com.thesuperbutt.srt.util.NonCreativeTabObject;
 import com.thesuperbutt.srt.SomeRandomThings;
 import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.util.NonCreativeTabObject;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

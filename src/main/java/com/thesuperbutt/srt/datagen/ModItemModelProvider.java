@@ -25,6 +25,7 @@ import java.util.Objects;
 
 public class ModItemModelProvider extends ItemModelProvider {
     private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> TRIM_MATERIALS = new LinkedHashMap<>();
+
     static {
         TRIM_MATERIALS.put(TrimMaterials.QUARTZ, 0.1F);
         TRIM_MATERIALS.put(TrimMaterials.IRON, 0.2F);
@@ -89,7 +90,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void trimmedArmorItem(@NotNull RegistryObject<Item> itemRegistryObject) {
         final String MOD_ID = SomeRandomThings.MOD_ID;
 
-        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+        if (itemRegistryObject.get() instanceof ArmorItem armorItem) {
             TRIM_MATERIALS.forEach((trimMaterial, trimValue) -> {
 
                 String armorType = switch (armorItem.getEquipmentSlot()) {
@@ -133,19 +134,19 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(@NotNull RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/generated")).texture("layer0",
-            new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));
+            new ResourceLocation(SomeRandomThings.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(@NotNull RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/generated")).texture("layer0",
-            new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));
+            new ResourceLocation(SomeRandomThings.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItemBlockTexture(@NotNull RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/generated")).texture("layer0",
-            new ResourceLocation(SomeRandomThings.MOD_ID,"block/" + item.getId().getPath()));
+            new ResourceLocation(SomeRandomThings.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private void evenSimplerBlockItem(@NotNull RegistryObject<Block> block) {
@@ -154,9 +155,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder handheldItem(@NotNull RegistryObject<Item> item) {
-        return  withExistingParent(item.getId().getPath(),
+        return withExistingParent(item.getId().getPath(),
             new ResourceLocation("item/handheld")).texture("layer0",
-            new ResourceLocation(SomeRandomThings.MOD_ID,"item/" + item.getId().getPath()));
+            new ResourceLocation(SomeRandomThings.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private void fenceItem(@NotNull RegistryObject<Block> block, @NotNull RegistryObject<Block> baseBlock) {
@@ -178,7 +179,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     private void wallItem(@NotNull RegistryObject<Block> block, @NotNull RegistryObject<Block> baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/wall_inventory"))
-            .texture("wall",  new ResourceLocation(SomeRandomThings.MOD_ID, "block/" +
+            .texture("wall", new ResourceLocation(SomeRandomThings.MOD_ID, "block/" +
                 Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock.get())).getPath()));
     }
 }

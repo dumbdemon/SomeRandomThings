@@ -2,13 +2,17 @@ package com.thesuperbutt.srt;
 
 import com.mojang.logging.LogUtils;
 import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.entities.ModBlockEntities;
 import com.thesuperbutt.srt.entity.ModEntities;
 import com.thesuperbutt.srt.entity.client.RhinoRenderer;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
 import com.thesuperbutt.srt.item.ModItems;
 import com.thesuperbutt.srt.loot.ModLootModifier;
+import com.thesuperbutt.srt.screen.GemPolishingStationScreen;
+import com.thesuperbutt.srt.screen.ModMenuTypes;
 import com.thesuperbutt.srt.sound.ModSounds;
 import com.thesuperbutt.srt.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -50,6 +54,8 @@ public class SomeRandomThings {
         ModVillagers.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -78,6 +84,8 @@ public class SomeRandomThings {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
     }
 }

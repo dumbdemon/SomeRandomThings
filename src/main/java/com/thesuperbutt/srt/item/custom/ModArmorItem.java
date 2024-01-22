@@ -17,7 +17,7 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
         (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
             .put(ModArmorMaterials.SAPPHIRE, new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 1,
-                false,false, true)).build();
+                false, false, true)).build();
 
     public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
@@ -25,8 +25,8 @@ public class ModArmorItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, @NotNull Level world, Player player) {
-        if(!world.isClientSide()) {
-            if(hasFullSuitOfArmorOn(player)) {
+        if (!world.isClientSide()) {
+            if (hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
             }
         }
@@ -37,7 +37,7 @@ public class ModArmorItem extends ArmorItem {
             ArmorMaterial mapArmorMaterial = entry.getKey();
             MobEffectInstance mapStatusEffect = entry.getValue();
 
-            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
@@ -47,7 +47,7 @@ public class ModArmorItem extends ArmorItem {
                                             @NotNull MobEffectInstance mapStatusEffect) {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
 
-        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
+        if (hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addEffect(new MobEffectInstance(mapStatusEffect));
         }
     }
@@ -64,15 +64,15 @@ public class ModArmorItem extends ArmorItem {
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, @NotNull Player player) {
         for (ItemStack armorStack : player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
+            if (!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;
             }
         }
 
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
+        ArmorItem boots = ((ArmorItem) player.getInventory().getArmor(0).getItem());
+        ArmorItem leggings = ((ArmorItem) player.getInventory().getArmor(1).getItem());
+        ArmorItem breastplate = ((ArmorItem) player.getInventory().getArmor(2).getItem());
+        ArmorItem helmet = ((ArmorItem) player.getInventory().getArmor(3).getItem());
 
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
             leggings.getMaterial() == material && boots.getMaterial() == material;

@@ -27,7 +27,7 @@ public class RhinoAttackGoal extends MeleeAttackGoal {
 
     @Override
     protected void checkAndPerformAttack(@NotNull LivingEntity pEnemy, double pDistToEnemySqr) {
-        if (isEnemyWithinAttackRange(pEnemy, pDistToEnemySqr)){
+        if (isEnemyWithinAttackRange(pEnemy, pDistToEnemySqr)) {
             shouldCountUntilNextAttack = true;
 
             if (isTimeToStartAttackAnimation()) {
