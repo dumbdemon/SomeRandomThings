@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-21T22:43:18.7715405	Item Models: srt
+// 1.20.1	2024-01-22T00:13:24.5817469	Item Models: srt
 9afce84c398fd2caad08e1b582ff455036c0257d assets/srt/models/item/bar_brawl_music_disc.json
 7711d94e90e923a08f53fe8328266893f133f689 assets/srt/models/item/catmint.json
 9b005d560afb869bf434fced95c49b6d6bd3a581 assets/srt/models/item/corn.json
@@ -6,6 +6,7 @@ c158ece84a4b692348dcbbc19fe8a8e960bb1a6b assets/srt/models/item/corn_seeds.json
 9b4d583c4bb10845dcb4e368ee9075423527d384 assets/srt/models/item/metal_detector.json
 009b31fea57331eb167fca609fa7639d8db38316 assets/srt/models/item/pine_cone.json
 81400f59c47db61569324d41f7ddf75368fc429a assets/srt/models/item/raw_sapphire.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/srt/models/item/rhino_spawn_egg.json
 02d3c63291d1196b25a9346bd6066b1158db7b93 assets/srt/models/item/sapphire.json
 bb93a76a07cf5cfb7e9f0c9904b36c2a6bb5dc99 assets/srt/models/item/sapphire_axe.json
 ce04a711e06d0497ffb8e5203bf5fc5ca8b41f07 assets/srt/models/item/sapphire_boots.json
