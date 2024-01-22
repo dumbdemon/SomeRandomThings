@@ -1,0 +1,12 @@
+{
+  "type": "srt:gem_polishing",
+  "ingredients": [
+    {
+      "item": "srt:raw_sapphire"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "srt:sapphire"
+  }
+}

@@ -1,6 +1,6 @@
 package com.thesuperbutt.srt.block.entities;
 
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.recipe.GemPolishingRecipe;
 import com.thesuperbutt.srt.screen.GemPolishingStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -25,6 +25,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
@@ -130,7 +132,8 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.SAPPHIRE.get(), 1);
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getResultItem(null);
         itemStackHandler.extractItem(INPUT_SLOT, 1, false);
 
         this.itemStackHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
@@ -138,10 +141,26 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemStackHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.RAW_SAPPHIRE.get();
-        ItemStack result = new ItemStack(ModItems.SAPPHIRE.get());
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
 
-        return hasCraftingItem && canInsertIntoOutput(result.getItem()) && canInsertAmountIntoOutput(result.getCount());
+        if (recipe.isEmpty()) {
+            return false;
+        }
+
+        ItemStack result = recipe.get().getResultItem(null);
+
+        return canInsertIntoOutput(result.getItem()) && canInsertAmountIntoOutput(result.getCount());
+    }
+
+    private @NotNull Optional<GemPolishingRecipe> getCurrentRecipe() {
+        SimpleContainer inv = new SimpleContainer(this.itemStackHandler.getSlots());
+
+        for (int i = 0; i < itemStackHandler.getSlots(); i++) {
+            inv.setItem(i, this.itemStackHandler.getStackInSlot(i));
+        }
+
+        assert this.level != null;
+        return this.level.getRecipeManager().getRecipeFor(GemPolishingRecipe.Type.INSTANCE, inv, level);
     }
 
     private boolean canInsertIntoOutput(Item resultItem) {

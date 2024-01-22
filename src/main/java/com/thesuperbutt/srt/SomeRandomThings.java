@@ -8,6 +8,7 @@ import com.thesuperbutt.srt.entity.client.RhinoRenderer;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
 import com.thesuperbutt.srt.item.ModItems;
 import com.thesuperbutt.srt.loot.ModLootModifier;
+import com.thesuperbutt.srt.recipe.ModRecipe;
 import com.thesuperbutt.srt.screen.GemPolishingStationScreen;
 import com.thesuperbutt.srt.screen.ModMenuTypes;
 import com.thesuperbutt.srt.sound.ModSounds;
@@ -56,6 +57,7 @@ public class SomeRandomThings {
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipe.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

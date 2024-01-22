@@ -1,0 +1,12 @@
+{
+  "type": "srt:gem_polishing",
+  "ingredients": [
+    {
+      "item": "minecraft:coal_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:diamond"
+  }
+}
