@@ -1,9 +1,9 @@
 package com.thesuperbutt.srt.datagen.loot;
 
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.block.custom.CornCropBlock;
 import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -29,52 +29,52 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
-        this.dropSelf(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
-        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_BLOCK.get());
+        this.dropSelf(SomeRandomBlocks.RAW_SAPPHIRE_BLOCK.get());
+        this.dropSelf(SomeRandomBlocks.SOUND_BLOCK.get());
 
-        this.add(ModBlocks.SAPPHIRE_ORE.get(),
-            block -> createCopperLikeOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-        this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
-            block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-        this.add(ModBlocks.NETHER_SAPPHIRE_ORE.get(),
-            block -> createCopperLikeOreDrops(ModBlocks.NETHER_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
-        this.add(ModBlocks.END_STONE_SAPPHIRE_ORE.get(),
-            block -> createCopperLikeOreDrops(ModBlocks.END_STONE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
+        this.add(SomeRandomBlocks.SAPPHIRE_ORE.get(),
+            block -> createCopperLikeOreDrops(SomeRandomBlocks.SAPPHIRE_ORE.get(), SomeRandomItems.RAW_SAPPHIRE.get()));
+        this.add(SomeRandomBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
+            block -> createCopperLikeOreDrops(SomeRandomBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), SomeRandomItems.RAW_SAPPHIRE.get()));
+        this.add(SomeRandomBlocks.NETHER_SAPPHIRE_ORE.get(),
+            block -> createCopperLikeOreDrops(SomeRandomBlocks.NETHER_SAPPHIRE_ORE.get(), SomeRandomItems.RAW_SAPPHIRE.get()));
+        this.add(SomeRandomBlocks.END_STONE_SAPPHIRE_ORE.get(),
+            block -> createCopperLikeOreDrops(SomeRandomBlocks.END_STONE_SAPPHIRE_ORE.get(), SomeRandomItems.RAW_SAPPHIRE.get()));
 
-        this.dropSelf(ModBlocks.SAPPHIRE_STAIRS.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_BUTTON.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_FENCE.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_FENCE_GATE.get());
-        this.dropSelf(ModBlocks.SAPPHIRE_WALL.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_STAIRS.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_BUTTON.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_TRAPDOOR.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_FENCE.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_FENCE_GATE.get());
+        this.dropSelf(SomeRandomBlocks.SAPPHIRE_WALL.get());
 
-        this.add(ModBlocks.SAPPHIRE_SLAB.get(),
-            block -> createSlabItemTable(ModBlocks.SAPPHIRE_SLAB.get()));
-        this.add(ModBlocks.SAPPHIRE_DOOR.get(),
-            block -> createDoorTable(ModBlocks.SAPPHIRE_DOOR.get()));
+        this.add(SomeRandomBlocks.SAPPHIRE_SLAB.get(),
+            block -> createSlabItemTable(SomeRandomBlocks.SAPPHIRE_SLAB.get()));
+        this.add(SomeRandomBlocks.SAPPHIRE_DOOR.get(),
+            block -> createDoorTable(SomeRandomBlocks.SAPPHIRE_DOOR.get()));
 
         LootItemCondition.Builder toDropSeedOrCropStrawberry = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
+            .hasBlockStateProperties(SomeRandomBlocks.STRAWBERRY_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
 
-        this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
-            ModItems.STRAWBERRY_SEEDS.get(), toDropSeedOrCropStrawberry));
+        this.add(SomeRandomBlocks.STRAWBERRY_CROP.get(), createCropDrops(SomeRandomBlocks.STRAWBERRY_CROP.get(), SomeRandomItems.STRAWBERRY.get(),
+            SomeRandomItems.STRAWBERRY_SEEDS.get(), toDropSeedOrCropStrawberry));
 
         LootItemCondition.Builder toDropSeedOrCropCorn = LootItemBlockStatePropertyCondition
-            .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+            .hasBlockStateProperties(SomeRandomBlocks.CORN_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7))
             .or(LootItemBlockStatePropertyCondition
-                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .hasBlockStateProperties(SomeRandomBlocks.CORN_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
 
-        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
-            ModItems.CORN_SEEDS.get(), toDropSeedOrCropCorn));
+        this.add(SomeRandomBlocks.CORN_CROP.get(), createCropDrops(SomeRandomBlocks.CORN_CROP.get(), SomeRandomItems.CORN.get(),
+            SomeRandomItems.CORN_SEEDS.get(), toDropSeedOrCropCorn));
 
-        this.dropSelf(ModBlocks.CATMINT.get());
-        this.add(ModBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(ModBlocks.CATMINT.get()));
-        this.dropSelf(ModBlocks.GEM_POLISHING_STATION.get());
+        this.dropSelf(SomeRandomBlocks.CATMINT.get());
+        this.add(SomeRandomBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(SomeRandomBlocks.CATMINT.get()));
+        this.dropSelf(SomeRandomBlocks.GEM_POLISHING_STATION.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
@@ -87,6 +87,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return SomeRandomBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }

@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.item;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.entity.ModEntities;
 import com.thesuperbutt.srt.item.custom.FuelItem;
 import com.thesuperbutt.srt.item.custom.MetalDetectorItem;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 @SuppressWarnings("unused")
-public class ModItems {
+public class SomeRandomItems {
     public static final DeferredRegister<Item> ITEMS =
         DeferredRegister.create(ForgeRegistries.ITEMS, SomeRandomThings.MOD_ID);
 
@@ -57,10 +57,10 @@ public class ModItems {
         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
-        () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+        () -> new ItemNameBlockItem(SomeRandomBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
-        () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+        () -> new ItemNameBlockItem(SomeRandomBlocks.CORN_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> CORN = ITEMS.register("corn",
         () -> new Item(new Item.Properties()));
 

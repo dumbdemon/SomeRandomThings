@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.compat;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.recipe.GemPolishingRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -29,7 +29,7 @@ public class GemPolishingCategory implements IRecipeCategory<GemPolishingRecipe>
 
     public GemPolishingCategory(@NotNull IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.GEM_POLISHING_STATION.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(SomeRandomBlocks.GEM_POLISHING_STATION.get()));
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.item;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.util.NonCreativeTabObject;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -18,13 +18,13 @@ public class ModCreativeModTabs {
     @SuppressWarnings("unused")
     public static final RegistryObject<CreativeModeTab> SRT_TAB = CREATIVE_MODE_TABS.register("somerandomsthings_tab",
         () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
+            .icon(() -> new ItemStack(SomeRandomItems.SAPPHIRE.get()))
             .title(Component.translatable("creativetab.srt_tab"))
             .displayItems(((itemDisplayParameters, output) -> {
-                ModItems.ITEMS.getEntries().stream().map(RegistryObject::get)
+                SomeRandomItems.ITEMS.getEntries().stream().map(RegistryObject::get)
                     .filter(item -> !(item instanceof NonCreativeTabObject))
                     .forEach(output::accept);
-                ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)
+                SomeRandomBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)
                     .filter(block -> !(block instanceof NonCreativeTabObject))
                     .forEach(output::accept);
             }))

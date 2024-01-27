@@ -5,7 +5,7 @@ import com.thesuperbutt.srt.block.custom.CornCropBlock;
 import com.thesuperbutt.srt.block.custom.GemPolishingStationBlock;
 import com.thesuperbutt.srt.block.custom.SoundBlock;
 import com.thesuperbutt.srt.block.custom.StrawberryCropBlock;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import com.thesuperbutt.srt.sound.ModSounds;
 import com.thesuperbutt.srt.util.co.NCTOFlowerPotBlock;
 import net.minecraft.sounds.SoundEvents;
@@ -23,14 +23,14 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class SomeRandomBlocks {
     public static final DeferredRegister<Block> BLOCKS =
         DeferredRegister.create(ForgeRegistries.BLOCKS, SomeRandomThings.MOD_ID);
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
-        () -> new StairBlock(() -> ModBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(),
+        () -> new StairBlock(() -> SomeRandomBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(),
             BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> RAW_SAPPHIRE_BLOCK = registerBlock("raw_sapphire_block",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
@@ -83,7 +83,7 @@ public class ModBlocks {
         () -> new FlowerBlock(() -> MobEffects.LUCK, 5, BlockBehaviour.Properties.copy(Blocks.ALLIUM).noCollission().noOcclusion()));
     public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
         () -> new NCTOFlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
-            ModBlocks.CATMINT, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+            SomeRandomBlocks.CATMINT, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
         () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
@@ -95,7 +95,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return SomeRandomItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

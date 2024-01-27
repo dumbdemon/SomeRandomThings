@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     SAPPHIRE("sapphire", 26, new int[]{5, 7, 5, 4}, 25,
-        SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(ModItems.SAPPHIRE.get()));
+        SoundEvents.ARMOR_EQUIP_GOLD, 1f, 0f, () -> Ingredient.of(SomeRandomItems.SAPPHIRE.get()));
 
     private static final int[] BASE_DURABILITY = {11, 16, 16, 13};
     private final String name;

@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.block.entities;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,7 +17,7 @@ public class ModBlockEntities {
     }    public static final RegistryObject<BlockEntityType<GemPolishingStationBlockEntity>> GEM_POLISHING_BE =
         BLOCK_ENTITIES.register("gem_polishing_be", () ->
             BlockEntityType.Builder.of(GemPolishingStationBlockEntity::new,
-                ModBlocks.GEM_POLISHING_STATION.get()).build(null));
+                SomeRandomBlocks.GEM_POLISHING_STATION.get()).build(null));
 
 
 }

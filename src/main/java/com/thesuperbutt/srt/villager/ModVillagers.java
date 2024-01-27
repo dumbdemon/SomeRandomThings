@@ -2,7 +2,7 @@ package com.thesuperbutt.srt.villager;
 
 import com.google.common.collect.ImmutableSet;
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -21,7 +21,7 @@ public class ModVillagers {
         DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, SomeRandomThings.MOD_ID);
 
     public static final RegistryObject<PoiType> SOUND_POI = POI_TYPES.register("sound_poi",
-        () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SOUND_BLOCK.get().getStateDefinition().getPossibleStates()),
+        () -> new PoiType(ImmutableSet.copyOf(SomeRandomBlocks.SOUND_BLOCK.get().getStateDefinition().getPossibleStates()),
             1, 1));
 
     static Predicate<Holder<PoiType>> soundEngineer = holder -> holder.get() == SOUND_POI.get();

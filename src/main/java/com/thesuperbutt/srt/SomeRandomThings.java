@@ -1,12 +1,12 @@
 package com.thesuperbutt.srt;
 
 import com.mojang.logging.LogUtils;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.block.entities.ModBlockEntities;
 import com.thesuperbutt.srt.entity.ModEntities;
 import com.thesuperbutt.srt.entity.client.RhinoRenderer;
 import com.thesuperbutt.srt.item.ModCreativeModTabs;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import com.thesuperbutt.srt.loot.ModLootModifier;
 import com.thesuperbutt.srt.recipe.ModRecipe;
 import com.thesuperbutt.srt.screen.GemPolishingStationScreen;
@@ -49,8 +49,8 @@ public class SomeRandomThings {
         // Register ourselves for server and other game events we are interested in
         ModCreativeModTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        SomeRandomItems.register(modEventBus);
+        SomeRandomBlocks.register(modEventBus);
         ModLootModifier.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModSounds.register(modEventBus);
@@ -67,7 +67,7 @@ public class SomeRandomThings {
     }
 
     private void commonSetup(final @NotNull FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT));
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(SomeRandomBlocks.CATMINT.getId(), SomeRandomBlocks.POTTED_CATMINT));
     }
 
     // Add the example block item to the building blocks tab

@@ -1,8 +1,8 @@
 package com.thesuperbutt.srt.datagen;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -45,46 +45,46 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.SAPPHIRE);
-        simpleItem(ModItems.RAW_SAPPHIRE);
+        simpleItem(SomeRandomItems.SAPPHIRE);
+        simpleItem(SomeRandomItems.RAW_SAPPHIRE);
 
-        simpleItem(ModItems.METAL_DETECTOR);
-        simpleItem(ModItems.PINE_CONE);
-        simpleItem(ModItems.STRAWBERRY);
-        simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(SomeRandomItems.METAL_DETECTOR);
+        simpleItem(SomeRandomItems.PINE_CONE);
+        simpleItem(SomeRandomItems.STRAWBERRY);
+        simpleItem(SomeRandomItems.STRAWBERRY_SEEDS);
 
-        simpleItem(ModItems.CORN);
-        simpleItem(ModItems.CORN_SEEDS);
+        simpleItem(SomeRandomItems.CORN);
+        simpleItem(SomeRandomItems.CORN_SEEDS);
 
-        simpleItem(ModItems.BAR_BRAWL_MUSIC_DISC);
+        simpleItem(SomeRandomItems.BAR_BRAWL_MUSIC_DISC);
 
-        simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
+        simpleBlockItem(SomeRandomBlocks.SAPPHIRE_DOOR);
 
-        fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
-        wallItem(ModBlocks.SAPPHIRE_WALL, ModBlocks.SAPPHIRE_BLOCK);
-        buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
+        fenceItem(SomeRandomBlocks.SAPPHIRE_FENCE, SomeRandomBlocks.SAPPHIRE_BLOCK);
+        wallItem(SomeRandomBlocks.SAPPHIRE_WALL, SomeRandomBlocks.SAPPHIRE_BLOCK);
+        buttonItem(SomeRandomBlocks.SAPPHIRE_BUTTON, SomeRandomBlocks.SAPPHIRE_BLOCK);
 
-        evenSimplerBlockItem(ModBlocks.SAPPHIRE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.SAPPHIRE_SLAB);
-        evenSimplerBlockItem(ModBlocks.SAPPHIRE_PRESSURE_PLATE);
-        evenSimplerBlockItem(ModBlocks.SAPPHIRE_FENCE_GATE);
+        evenSimplerBlockItem(SomeRandomBlocks.SAPPHIRE_STAIRS);
+        evenSimplerBlockItem(SomeRandomBlocks.SAPPHIRE_SLAB);
+        evenSimplerBlockItem(SomeRandomBlocks.SAPPHIRE_PRESSURE_PLATE);
+        evenSimplerBlockItem(SomeRandomBlocks.SAPPHIRE_FENCE_GATE);
 
-        trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
+        trapdoorItem(SomeRandomBlocks.SAPPHIRE_TRAPDOOR);
 
-        handheldItem(ModItems.SAPPHIRE_AXE);
-        handheldItem(ModItems.SAPPHIRE_SHOVEL);
-        handheldItem(ModItems.SAPPHIRE_PICKAXE);
-        handheldItem(ModItems.SAPPHIRE_HOE);
-        handheldItem(ModItems.SAPPHIRE_SWORD);
+        handheldItem(SomeRandomItems.SAPPHIRE_AXE);
+        handheldItem(SomeRandomItems.SAPPHIRE_SHOVEL);
+        handheldItem(SomeRandomItems.SAPPHIRE_PICKAXE);
+        handheldItem(SomeRandomItems.SAPPHIRE_HOE);
+        handheldItem(SomeRandomItems.SAPPHIRE_SWORD);
 
-        trimmedArmorItem(ModItems.SAPPHIRE_HELMET);
-        trimmedArmorItem(ModItems.SAPPHIRE_CHESTPLATE);
-        trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);
-        trimmedArmorItem(ModItems.SAPPHIRE_BOOTS);
+        trimmedArmorItem(SomeRandomItems.SAPPHIRE_HELMET);
+        trimmedArmorItem(SomeRandomItems.SAPPHIRE_CHESTPLATE);
+        trimmedArmorItem(SomeRandomItems.SAPPHIRE_LEGGINGS);
+        trimmedArmorItem(SomeRandomItems.SAPPHIRE_BOOTS);
 
-        simpleBlockItemBlockTexture(ModBlocks.CATMINT);
+        simpleBlockItemBlockTexture(SomeRandomBlocks.CATMINT);
 
-        withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(SomeRandomItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private void trimmedArmorItem(@NotNull RegistryObject<Item> itemRegistryObject) {

@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.datagen;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import com.thesuperbutt.srt.loot.AddItemModifier;
 import com.thesuperbutt.srt.loot.AddSusSandItemModifier;
 import net.minecraft.data.PackOutput;
@@ -23,18 +23,18 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("pine_cone_from_grass", new AddItemModifier(new LootItemCondition[]{
             LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
             LootItemRandomChanceCondition.randomChance(0.27f).build()
-        }, ModItems.PINE_CONE.get()));
+        }, SomeRandomItems.PINE_CONE.get()));
 
         add("pine_cone_from_creeper", new AddItemModifier(new LootItemCondition[]{
             new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()
-        }, ModItems.PINE_CONE.get()));
+        }, SomeRandomItems.PINE_CONE.get()));
 
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[]{
             new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build()
-        }, ModItems.METAL_DETECTOR.get()));
+        }, SomeRandomItems.METAL_DETECTOR.get()));
 
         add("metal_detector_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[]{
             new LootTableIdCondition.Builder(new ResourceLocation("archeology/desert_pyramid")).build()
-        }, ModItems.METAL_DETECTOR.get()));
+        }, SomeRandomItems.METAL_DETECTOR.get()));
     }
 }

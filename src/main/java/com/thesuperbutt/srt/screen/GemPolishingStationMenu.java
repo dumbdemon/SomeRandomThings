@@ -1,6 +1,6 @@
 package com.thesuperbutt.srt.screen;
 
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.block.entities.GemPolishingStationBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -104,7 +104,7 @@ public class GemPolishingStationMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-            pPlayer, ModBlocks.GEM_POLISHING_STATION.get());
+            pPlayer, SomeRandomBlocks.GEM_POLISHING_STATION.get());
     }
 
     private void addPlayerInv(Inventory playerInv) {

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "srt:sapphire"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "sSs",
+    "sSs"
+  ],
+  "result": {
+    "item": "srt:sapphire_fence_gate"
+  },
+  "show_notification": true
+}

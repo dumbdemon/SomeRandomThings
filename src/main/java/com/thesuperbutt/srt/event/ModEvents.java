@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.event;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import com.thesuperbutt.srt.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -28,7 +28,7 @@ public class ModEvents {
         if (event.getType() == VillagerProfession.FARMER) {
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                 new ItemStack(Items.EMERALD, 2),
-                new ItemStack(ModItems.STRAWBERRY.get(), 12),
+                new ItemStack(SomeRandomItems.STRAWBERRY.get(), 12),
                 10, 8, 0.02f
             ));
         }

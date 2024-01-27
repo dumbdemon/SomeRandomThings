@@ -1,7 +1,7 @@
 package com.thesuperbutt.srt.datagen;
 
 import com.thesuperbutt.srt.SomeRandomThings;
-import com.thesuperbutt.srt.block.ModBlocks;
+import com.thesuperbutt.srt.block.SomeRandomBlocks;
 import com.thesuperbutt.srt.block.custom.TwoBlockCrop;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -23,37 +23,37 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
-        blockWithItem(ModBlocks.RAW_SAPPHIRE_BLOCK);
-        blockWithItem(ModBlocks.SOUND_BLOCK);
+        blockWithItem(SomeRandomBlocks.SAPPHIRE_BLOCK);
+        blockWithItem(SomeRandomBlocks.RAW_SAPPHIRE_BLOCK);
+        blockWithItem(SomeRandomBlocks.SOUND_BLOCK);
 
-        blockWithItem(ModBlocks.SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.END_STONE_SAPPHIRE_ORE);
+        blockWithItem(SomeRandomBlocks.SAPPHIRE_ORE);
+        blockWithItem(SomeRandomBlocks.DEEPSLATE_SAPPHIRE_ORE);
+        blockWithItem(SomeRandomBlocks.NETHER_SAPPHIRE_ORE);
+        blockWithItem(SomeRandomBlocks.END_STONE_SAPPHIRE_ORE);
 
-        stairsBlock((StairBlock) ModBlocks.SAPPHIRE_STAIRS.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
-        slabBlock((SlabBlock) ModBlocks.SAPPHIRE_SLAB.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
+        stairsBlock((StairBlock) SomeRandomBlocks.SAPPHIRE_STAIRS.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
+        slabBlock((SlabBlock) SomeRandomBlocks.SAPPHIRE_SLAB.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
 
-        buttonBlock((ButtonBlock) ModBlocks.SAPPHIRE_BUTTON.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
-        pressurePlateBlock((PressurePlateBlock) ModBlocks.SAPPHIRE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
+        buttonBlock((ButtonBlock) SomeRandomBlocks.SAPPHIRE_BUTTON.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
+        pressurePlateBlock((PressurePlateBlock) SomeRandomBlocks.SAPPHIRE_PRESSURE_PLATE.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
 
-        fenceBlock((FenceBlock) ModBlocks.SAPPHIRE_FENCE.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
-        fenceGateBlock((FenceGateBlock) ModBlocks.SAPPHIRE_FENCE_GATE.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
-        wallBlock((WallBlock) ModBlocks.SAPPHIRE_WALL.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
+        fenceBlock((FenceBlock) SomeRandomBlocks.SAPPHIRE_FENCE.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
+        fenceGateBlock((FenceGateBlock) SomeRandomBlocks.SAPPHIRE_FENCE_GATE.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
+        wallBlock((WallBlock) SomeRandomBlocks.SAPPHIRE_WALL.get(), blockTexture(SomeRandomBlocks.SAPPHIRE_BLOCK.get()));
 
-        doorBlockWithRenderType((DoorBlock) ModBlocks.SAPPHIRE_DOOR.get(), modLoc("block/sapphire_door_bottom"), modLoc("block/sapphire_door_top"), "cutout");
-        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.SAPPHIRE_TRAPDOOR.get(), modLoc("block/sapphire_trapdoor"), true, "cutout");
+        doorBlockWithRenderType((DoorBlock) SomeRandomBlocks.SAPPHIRE_DOOR.get(), modLoc("block/sapphire_door_bottom"), modLoc("block/sapphire_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) SomeRandomBlocks.SAPPHIRE_TRAPDOOR.get(), modLoc("block/sapphire_trapdoor"), true, "cutout");
 
-        make2BlockCrop((TwoBlockCrop) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
-        make2BlockCrop((TwoBlockCrop) ModBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
+        make2BlockCrop((TwoBlockCrop) SomeRandomBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+        make2BlockCrop((TwoBlockCrop) SomeRandomBlocks.CORN_CROP.get(), "corn_stage_", "corn_stage_");
 
-        simpleBlockWithItem(ModBlocks.CATMINT.get(), models().cross(blockTexture(ModBlocks.CATMINT.get()).getPath(),
-            blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
-        simpleBlockWithItem(ModBlocks.POTTED_CATMINT.get(), models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"), "plant",
-            blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+        simpleBlockWithItem(SomeRandomBlocks.CATMINT.get(), models().cross(blockTexture(SomeRandomBlocks.CATMINT.get()).getPath(),
+            blockTexture(SomeRandomBlocks.CATMINT.get())).renderType("cutout"));
+        simpleBlockWithItem(SomeRandomBlocks.POTTED_CATMINT.get(), models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"), "plant",
+            blockTexture(SomeRandomBlocks.CATMINT.get())).renderType("cutout"));
 
-        simpleBlockWithItem(ModBlocks.GEM_POLISHING_STATION.get(),
+        simpleBlockWithItem(SomeRandomBlocks.GEM_POLISHING_STATION.get(),
             new ModelFile.UncheckedModelFile(modLoc("block/gem_polishing_station")));
     }
 

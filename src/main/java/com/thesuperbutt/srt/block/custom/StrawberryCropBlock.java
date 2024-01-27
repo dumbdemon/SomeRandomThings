@@ -1,6 +1,6 @@
 package com.thesuperbutt.srt.block.custom;
 
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,7 +19,7 @@ public class StrawberryCropBlock extends TwoBlockCrop {
 
     @Override
     protected @NotNull ItemLike getBaseSeedId() {
-        return ModItems.STRAWBERRY_SEEDS.get();
+        return SomeRandomItems.STRAWBERRY_SEEDS.get();
     }
 
     @Override

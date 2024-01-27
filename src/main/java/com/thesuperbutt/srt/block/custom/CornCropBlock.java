@@ -1,6 +1,6 @@
 package com.thesuperbutt.srt.block.custom;
 
-import com.thesuperbutt.srt.item.ModItems;
+import com.thesuperbutt.srt.item.SomeRandomItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -98,8 +98,8 @@ public class CornCropBlock extends TwoBlockCrop {
 
     @Override
     public @NotNull ItemLike getBaseSeedId() {
-        ModItems.CORN_SEEDS.get();
-        return ModItems.CORN_SEEDS.get();
+        SomeRandomItems.CORN_SEEDS.get();
+        return SomeRandomItems.CORN_SEEDS.get();
     }
 
     @Override
